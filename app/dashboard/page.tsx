@@ -76,7 +76,7 @@ export default async function DashboardPage() {
             {all.filter(a => a.status === 'pending').slice(0, 5).map(a => (
               <Link
                 key={a.id}
-                href={`/assignments/${a.id}`}
+                href={`/assignments/`}
                 className="bg-[#1a1d27] border border-white/10 rounded-xl px-5 py-4 flex items-center justify-between hover:border-blue-500/40 hover:bg-[#1e2130] transition group"
               >
                 <div>
