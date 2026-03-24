@@ -3,6 +3,8 @@ import { useRouter } from 'next/navigation'
 import { createClient } from '@/utils/supabase/client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import logo from '@/public/logo.png'
+import Image from 'next/image'
 
 export default function Navbar() {
   const router = useRouter()
@@ -23,9 +25,13 @@ export default function Navbar() {
 
   return (
     <nav className="w-full border-b border-white/10 bg-[#0f1117] px-6 py-4 flex items-center justify-between sticky top-0 z-50 backdrop-blur-sm">
-      <Link href="/dashboard" className="text-lg font-semibold text-white tracking-tight">
-        Assign<span className="text-blue-400">Track</span>
-      </Link>
+
+      <div className="flex items-center">
+        <Image src={logo} alt="Logo" className="w-8 h-8 mr-2" />
+        <Link href="/dashboard" className="text-lg font-semibold text-white tracking-tight">
+          Assign<span className="text-blue-400">Track</span>
+        </Link>
+      </div>
       <div className="flex items-center gap-2">
         <Link href="/dashboard" className={linkClass('/dashboard')}>
           Dashboard
