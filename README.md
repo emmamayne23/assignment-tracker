@@ -17,4 +17,4 @@ A clean assignment tracker for students. Built with Next.js, Supabase, and Tailw
 - TypeScript
 
 ## Live Demo
-[your vercel link here]
+[[your vercel link here](https://assignmenttracker-pearl.vercel.app/)]
